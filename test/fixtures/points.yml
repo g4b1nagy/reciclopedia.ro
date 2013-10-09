@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  lat: 9.99
+  lng: 9.99
+  point_type: 1
+  paper: false
+  plastic: false
+  metal: false
+  other: MyString
+  name: MyString
+  schedule_week: MyString
+  schedule_sat: MyString
+  schedule_sun: MyString
+  website: MyString
+
+two:
+  lat: 9.99
+  lng: 9.99
+  point_type: 1
+  paper: false
+  plastic: false
+  metal: false
+  other: MyString
+  name: MyString
+  schedule_week: MyString
+  schedule_sat: MyString
+  schedule_sun: MyString
+  website: MyString

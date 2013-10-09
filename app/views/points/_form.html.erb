@@ -1,0 +1,65 @@
+<%= form_for(@point) do |f| %>
+  <% if @point.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@point.errors.count, "error") %> prohibited this point from being saved:</h2>
+
+      <ul>
+      <% @point.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :lat %><br />
+    <%= f.text_field :lat %>
+  </div>
+  <div class="field">
+    <%= f.label :lng %><br />
+    <%= f.text_field :lng %>
+  </div>
+  <div class="field">
+    <%= f.label :point_type %><br />
+    <%= f.number_field :point_type %>
+  </div>
+  <div class="field">
+    <%= f.label :paper %><br />
+    <%= f.check_box :paper %>
+  </div>
+  <div class="field">
+    <%= f.label :plastic %><br />
+    <%= f.check_box :plastic %>
+  </div>
+  <div class="field">
+    <%= f.label :metal %><br />
+    <%= f.check_box :metal %>
+  </div>
+  <div class="field">
+    <%= f.label :other %><br />
+    <%= f.text_field :other %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :schedule_week %><br />
+    <%= f.text_field :schedule_week %>
+  </div>
+  <div class="field">
+    <%= f.label :schedule_sat %><br />
+    <%= f.text_field :schedule_sat %>
+  </div>
+  <div class="field">
+    <%= f.label :schedule_sun %><br />
+    <%= f.text_field :schedule_sun %>
+  </div>
+  <div class="field">
+    <%= f.label :website %><br />
+    <%= f.text_field :website %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

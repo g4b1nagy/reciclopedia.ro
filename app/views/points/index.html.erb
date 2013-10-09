@@ -1,0 +1,45 @@
+<h1>Listing points</h1>
+
+<table>
+  <tr>
+    <th>Lat</th>
+    <th>Lng</th>
+    <th>Point type</th>
+    <th>Paper</th>
+    <th>Plastic</th>
+    <th>Metal</th>
+    <th>Other</th>
+    <th>Name</th>
+    <th>Schedule week</th>
+    <th>Schedule sat</th>
+    <th>Schedule sun</th>
+    <th>Website</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @points.each do |point| %>
+  <tr>
+    <td><%= point.lat %></td>
+    <td><%= point.lng %></td>
+    <td><%= point.point_type %></td>
+    <td><%= point.paper %></td>
+    <td><%= point.plastic %></td>
+    <td><%= point.metal %></td>
+    <td><%= point.other %></td>
+    <td><%= point.name %></td>
+    <td><%= point.schedule_week %></td>
+    <td><%= point.schedule_sat %></td>
+    <td><%= point.schedule_sun %></td>
+    <td><%= point.website %></td>
+    <td><%= link_to 'Show', point %></td>
+    <td><%= link_to 'Edit', edit_point_path(point) %></td>
+    <td><%= link_to 'Destroy', point, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Point', new_point_path %>
