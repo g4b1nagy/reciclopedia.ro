@@ -1,29 +1,337 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
 
-one:
-  lat: 9.99
-  lng: 9.99
-  point_type: 1
-  paper: false
-  plastic: false
+p0:
+  lat: 44.678072
+  lng: 23.566573
+  point_type: 2
+  paper: true
+  plastic: true
   metal: false
-  other: MyString
-  name: MyString
-  schedule_week: MyString
-  schedule_sat: MyString
-  schedule_sun: MyString
-  website: MyString
+  other: ""
+  name: "Panemar"
+  schedule_week: "09:00 - 20:00"
+  schedule_sat: "10:00 - 14:00"
+  schedule_sun: ""
+  website: "http://panemar.ro/"
 
-two:
-  lat: 9.99
-  lng: 9.99
+p1:
+  lat: 46.454420
+  lng: 26.632297
+  point_type: 0
+  paper: true
+  plastic: true
+  metal: true
+  other: ""
+  name: ""
+  schedule_week: ""
+  schedule_sat: ""
+  schedule_sun: ""
+  website: ""
+
+p2:
+  lat: 46.433349
+  lng: 24.941066
   point_type: 1
+  paper: true
+  plastic: true
+  metal: true
+  other: "Cupru, Aluminiu"
+  name: "Reciclare SA"
+  schedule_week: "08:00 - 18:00"
+  schedule_sat: "10:00 - 14:00"
+  schedule_sun: ""
+  website: "http://www.reciclare.ro/"
+
+p3:
+  lat: 47.037443
+  lng: 21.801065
+  point_type: 2
   paper: false
   plastic: false
   metal: false
-  other: MyString
-  name: MyString
-  schedule_week: MyString
-  schedule_sat: MyString
-  schedule_sun: MyString
-  website: MyString
+  other: "Baterii, Telefoane"
+  name: "Orange"
+  schedule_week: "09:00 - 17:00"
+  schedule_sat: "10:00 - 15:00"
+  schedule_sun: ""
+  website: "http://www.orange.ro/"
+
+p4:
+  lat: 45.968857
+  lng: 24.078469
+  point_type: 1
+  paper: false
+  plastic: true
+  metal: true
+  other: "Becuri, Baterii"
+  name: "Colectare SA"
+  schedule_week: "08:00 - 17:00"
+  schedule_sat: "10:00 - 14:00"
+  schedule_sun: ""
+  website: "http://colectare.ro/"
+
+p5:
+  lat: 44.556172
+  lng: 22.840815
+  point_type: 2
+  paper: true
+  plastic: true
+  metal: false
+  other: ""
+  name: "Panemar"
+  schedule_week: "09:00 - 20:00"
+  schedule_sat: "10:00 - 14:00"
+  schedule_sun: ""
+  website: "http://panemar.ro/"
+
+p6:
+  lat: 47.224705
+  lng: 24.954672
+  point_type: 2
+  paper: false
+  plastic: false
+  metal: false
+  other: "Telefoane, Baterii"
+  name: "Orange"
+  schedule_week: "08:00 - 17:00"
+  schedule_sat: "11:00 - 15:00"
+  schedule_sun: ""
+  website: "http://orange.ro/"
+
+p7:
+  lat: 46.040511
+  lng: 23.761050
+  point_type: 1
+  paper: true
+  plastic: true
+  metal: true
+  other: "Cupru, Aluminiu"
+  name: "Reciclare SA"
+  schedule_week: "07:00 - 18:00"
+  schedule_sat: "09:00 - 14:00"
+  schedule_sun: ""
+  website: "http://reciclare.ro/"
+
+p8:
+  lat: 45.014209
+  lng: 24.625888
+  point_type: 0
+  paper: true
+  plastic: true
+  metal: true
+  other: ""
+  name: ""
+  schedule_week: ""
+  schedule_sat: ""
+  schedule_sun: ""
+  website: ""
+
+p9:
+  lat: 46.560647
+  lng: 24.120169
+  point_type: 2
+  paper: true
+  plastic: true
+  metal: false
+  other: ""
+  name: "Panemar"
+  schedule_week: "09:00 - 20:00"
+  schedule_sat: "10:00 - 14:00"
+  schedule_sun: ""
+  website: "http://panemar.ro/"
+
+p10:
+  lat: 47.212738
+  lng: 24.926651
+  point_type: 2
+  paper: false
+  plastic: false
+  metal: false
+  other: "Telefoane, Baterii"
+  name: "Orange"
+  schedule_week: "08:00 - 17:00"
+  schedule_sat: "11:00 - 15:00"
+  schedule_sun: ""
+  website: "http://orange.ro/"
+
+p11:
+  lat: 44.490353
+  lng: 24.170037
+  point_type: 1
+  paper: true
+  plastic: true
+  metal: true
+  other: "Cupru, Aluminiu"
+  name: "Reciclare SA"
+  schedule_week: "07:00 - 18:00"
+  schedule_sat: "09:00 - 14:00"
+  schedule_sun: ""
+  website: "http://reciclare.ro/"
+
+p12:
+  lat: 44.332295
+  lng: 24.088286
+  point_type: 1
+  paper: false
+  plastic: true
+  metal: true
+  other: "Becuri, Baterii"
+  name: "Colectare SA"
+  schedule_week: "08:00 - 17:00"
+  schedule_sat: "10:00 - 14:00"
+  schedule_sun: ""
+  website: "http://colectare.ro/"
+
+p13:
+  lat: 44.784779
+  lng: 23.986357
+  point_type: 0
+  paper: true
+  plastic: true
+  metal: true
+  other: ""
+  name: ""
+  schedule_week: ""
+  schedule_sat: ""
+  schedule_sun: ""
+  website: ""
+
+p14:
+  lat: 44.407338
+  lng: 24.811771
+  point_type: 1
+  paper: false
+  plastic: true
+  metal: true
+  other: "Becuri, Baterii"
+  name: "Colectare SA"
+  schedule_week: "08:00 - 17:00"
+  schedule_sat: "10:00 - 14:00"
+  schedule_sun: ""
+  website: "http://colectare.ro/"
+
+p15:
+  lat: 44.989304
+  lng: 27.141717
+  point_type: 1
+  paper: true
+  plastic: true
+  metal: true
+  other: "Cupru, Aluminiu"
+  name: "Reciclare SA"
+  schedule_week: "07:00 - 18:00"
+  schedule_sat: "09:00 - 14:00"
+  schedule_sun: ""
+  website: "http://reciclare.ro/"
+
+p16:
+  lat: 47.256387
+  lng: 24.920424
+  point_type: 1
+  paper: false
+  plastic: true
+  metal: true
+  other: "Becuri, Baterii"
+  name: "Colectare SA"
+  schedule_week: "08:00 - 17:00"
+  schedule_sat: "10:00 - 14:00"
+  schedule_sun: ""
+  website: "http://colectare.ro/"
+
+p17:
+  lat: 46.529317
+  lng: 22.875557
+  point_type: 1
+  paper: false
+  plastic: true
+  metal: true
+  other: "Becuri, Baterii"
+  name: "Colectare SA"
+  schedule_week: "08:00 - 17:00"
+  schedule_sat: "10:00 - 14:00"
+  schedule_sun: ""
+  website: "http://colectare.ro/"
+
+p18:
+  lat: 46.842282
+  lng: 23.815570
+  point_type: 1
+  paper: true
+  plastic: true
+  metal: true
+  other: "Cupru, Aluminiu"
+  name: "Reciclare SA"
+  schedule_week: "07:00 - 18:00"
+  schedule_sat: "09:00 - 14:00"
+  schedule_sun: ""
+  website: "http://reciclare.ro/"
+
+p19:
+  lat: 47.126680
+  lng: 27.119919
+  point_type: 2
+  paper: false
+  plastic: false
+  metal: false
+  other: "Telefoane, Baterii"
+  name: "Orange"
+  schedule_week: "08:00 - 17:00"
+  schedule_sat: "11:00 - 15:00"
+  schedule_sun: ""
+  website: "http://orange.ro/"
+
+p20:
+  lat: 44.594174
+  lng: 26.661117
+  point_type: 2
+  paper: true
+  plastic: true
+  metal: false
+  other: ""
+  name: "Panemar"
+  schedule_week: "09:00 - 20:00"
+  schedule_sat: "10:00 - 14:00"
+  schedule_sun: ""
+  website: "http://panemar.ro/"
+
+p21:
+  lat: 45.639173
+  lng: 27.085479
+  point_type: 2
+  paper: true
+  plastic: true
+  metal: false
+  other: ""
+  name: "Panemar"
+  schedule_week: "09:00 - 20:00"
+  schedule_sat: "10:00 - 14:00"
+  schedule_sun: ""
+  website: "http://panemar.ro/"
+
+p22:
+  lat: 45.032674
+  lng: 25.680685
+  point_type: 0
+  paper: true
+  plastic: true
+  metal: true
+  other: ""
+  name: ""
+  schedule_week: ""
+  schedule_sat: ""
+  schedule_sun: ""
+  website: ""
+
+p23:
+  lat: 44.295062
+  lng: 25.402321
+  point_type: 1
+  paper: true
+  plastic: true
+  metal: true
+  other: "Cupru, Aluminiu"
+  name: "Reciclare SA"
+  schedule_week: "07:00 - 18:00"
+  schedule_sat: "09:00 - 14:00"
+  schedule_sun: ""
+  website: "http://reciclare.ro/"
