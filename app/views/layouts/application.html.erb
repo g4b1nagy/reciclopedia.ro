@@ -1,14 +1,65 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>reciclopedia.ro</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8">
+    <title>reciclopedia.ro<%= @page_name %></title>
+    <meta name="description" content="<%= @page_description %>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="g4b1nagy">
+    <%= stylesheet_link_tag "application" %>
+    <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=PT+Sans+Caption&subset=latin,latin-ext" %>
+    <%= javascript_include_tag "application" %>
+    <%= yield :head %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="<%= root_url %>">reciclopedia<small>.ro</small></a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <form id="search" class="navbar-form navbar-left">
+              <div class="form-group">
+                <input id="city" class="form-control" type="text" placeholder="Oraș">
+              </div>
+              <button type="submit" class="btn btn-default">Caută</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#TODO">Harta</a></li>
+              <li><a href="#TODO">Adaugă locație</a></li>
+              <li><a href="#TODO">Despre</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <%= image_tag "avatar.jpg", :class => "img-avatar", :alt => "user avatar" %>
+                  Gabi Nagy
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#TODO">Action</a></li>
+                  <li><a href="#TODO">Action</a></li>
+                  <li><a href="#TODO">Action</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 <%= yield %>
-
-</body>
+    </div>
+    <div id="footer">
+      <div class="container">
+        <p class="credit">
+          <span class="pull-left">Powered by <a href="http://www.usetogether.com/">UseTogether.com</a></span>
+          <span class="pull-right">a <a href="http://helpfulsheep.com/">helpful <%= image_tag "small-sheep.png", :alt => "small sheep" %> sheep</a> creation</span>
+        </p>
+      </div>
+    </div>
+  </body>
 </html>

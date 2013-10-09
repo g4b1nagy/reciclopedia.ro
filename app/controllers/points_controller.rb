@@ -6,7 +6,7 @@ class PointsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @points, :except => [:created_at, :updated_at] }
+      format.json { render json: @points, :except => [:id, :created_at, :updated_at] }
     end
   end
 

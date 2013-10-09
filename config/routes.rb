@@ -1,7 +1,7 @@
 Reciclopedia::Application.routes.draw do
 
-  resources :points
   root to: "hello#index"
+  resources :points
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
