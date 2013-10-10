@@ -1,3 +1,5 @@
+# coding: utf-8
+
 class PointsController < ApplicationController
   # GET /points
   # GET /points.json
@@ -24,8 +26,11 @@ class PointsController < ApplicationController
   # GET /points/new
   # GET /points/new.json
   def new
-    @point = Point.new
+    @page_name = " | adaugă locație"
+    @page_description = "Harta punctelor de reciclare la care oricine poate contribui"
     @wrapped = true
+
+    @point = Point.new
 
     respond_to do |format|
       format.html # new.html.erb

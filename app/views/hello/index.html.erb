@@ -1,8 +1,12 @@
 <%= render "map" %>
+<% content_for :head do %>
+  <%= stylesheet_link_tag "index" %>
+<% end %>
+
 <div class="container">
   <div class="row">
     <div class="col-lg-4 blurb">
-      <h2 class="brand">reciclopedia.ro</h2>
+      <h2 class="brand page-title">reciclopedia.ro</h2>
       <p>Harta punctelor de reciclare la care oricine poate contribui.</p>
       <p>Fie că vrei să <%= link_to "găsești", map_path %> un punct de colectare sau să <%= link_to "adaugi", add_path %> unul pe hartă, ai ajuns unde trebuie :)</p>
       <h4>Legenda</h4>
@@ -28,7 +32,7 @@
       </table>
     </div>
     <div class="col-lg-8">
-      <div id="map-canvas" class="map-index"></div>
+      <div id="map-canvas"></div>
     </div>
   </div>
 </div>

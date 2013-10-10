@@ -15,13 +15,13 @@
     </a>
   </div>
 
-  <div class="alert alert-success hidden">
+  <div class="alert alert-success">
     <strong>Uhuu!</strong> Noua locație a fost adăugată.
   </div>
 
   <% if @point.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@point.errors.count, "error") %> prohibited this point from being saved:</h2>
+      <2><%= pluralize(@point.errors.count, "error") %> prohibited this point from being saved:</h2>
       <ul>
       <% @point.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -35,7 +35,7 @@
   <%= f.hidden_field :point_type %>
 
   <div class="form-group">
-    <label for="address" class="col-lg-3 control-label">Locație <span class="required">*</span></label>
+    <label for="address" class="col-lg-3 control-label">Locație <span class="required-field">*</span></label>
     <div class="col-lg-9">
       <input type="text" class="form-control" id="address" placeholder="Str. Spiridușilor Nr. 7">
       <p class="help-block">Clickăie harta sau <a href="#TODO">detectează</a> locația curentă</p>
@@ -43,7 +43,7 @@
   </div>
 
   <div class="form-group">
-    <label for="materials" class="col-lg-3 control-label">Materiale <span class="required">*</span></label>
+    <label for="materials" class="col-lg-3 control-label">Materiale <span class="required-field">*</span></label>
     <div class="col-lg-9">
       <div class="checkbox">
         <label>
@@ -107,5 +107,4 @@
       <button name="commit" type="submit" class="btn btn-success">Adaugă</button>
     </div>
   </div>
-
 <% end %>
