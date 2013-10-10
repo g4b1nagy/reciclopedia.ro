@@ -101,7 +101,7 @@ function initSearch() {
 		if (!city)
 			return false;
 
-		window.location = "http://localhost:3000/map#" + city;
+		window.location = map_path + "#" + city;
 		return false;
 
 		zoomOn(city);
@@ -162,7 +162,7 @@ google.maps.event.addDomListener(window, "load", function() {
 	initMap();
 	initSearch();
 
-	$.get("http://localhost:3000/points.json", function(response) {
+	$.get(points_path + ".json", function(response) {
 		data = response;
 		addPins();
 	});

@@ -1,5 +1,45 @@
-<h1>New point</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-5 blurb">
+      <h2>Adaugă locație</h2>
+      <%= render "form_add" %>
+    </div>
+    <div class="col-lg-7">
+      <div id="map-canvas"></div>
+    </div>
+  </div>
+</div>
+<style type="text/css">
 
-<%= render 'form' %>
+.blurb h2 {
+  color: #333;
+}
 
-<%= link_to 'Back', points_path %>
+.btn-group {
+  margin-bottom: 20px;
+}
+
+.btn-group a {
+  padding: 10px 12px;
+  color: #fff;
+}
+
+.btn-group a img {
+  margin-right: 3px;
+}
+
+.alert {
+  margin-top: -10px;
+}
+
+.help-block {
+  margin: 5px 0 0;
+}
+
+#map-canvas {
+  height: 440px;
+  border: 1px solid #ddd;
+}
+
+
+</style>

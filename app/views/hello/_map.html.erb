@@ -74,5 +74,9 @@
       <%= image_tag "avatar.jpg", :class => "img-avatar pull-right", :alt => "user avatar", :title => "Adăugat de Gabi Nagy" %>
     </div>
   </script>
+  <script type="text/javascript">
+    var map_path = "<%= map_path %>";
+    var points_path = "<%= points_path %>";
+  </script>
   <%= javascript_include_tag "main/script" %>
 <% end %>

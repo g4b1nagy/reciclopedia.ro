@@ -195,17 +195,27 @@ a, a:link, a:visited, a:hover, a:active {
 
 /*================================================================================================= MAP */
 
-#map-canvas {
-	height: 440px;
-	border: 1px solid #ddd;
-}
-
 #map-canvas *,
 #map-canvas *:before,
 #map-canvas *:after {
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
+}
+
+.map-index {
+	height: 440px;
+	border: 1px solid #ddd;
+}
+
+.map-map {
+	position: absolute;
+	top: 50px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: auto;
+	border: 0;
 }
 
 /*================================================================================================= INFOWINDOW */

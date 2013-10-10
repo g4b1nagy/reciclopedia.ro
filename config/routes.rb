@@ -1,6 +1,9 @@
 Reciclopedia::Application.routes.draw do
 
   root to: "hello#index"
+  get "/map" => "hello#map", :as => :map
+  get "/add" => "points#new", :as => :add
+  get "/about" => "hello#about", :as => :about
   resources :points
 
   # The priority is based upon order of creation:

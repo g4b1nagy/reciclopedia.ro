@@ -25,6 +25,7 @@ class PointsController < ApplicationController
   # GET /points/new.json
   def new
     @point = Point.new
+    @wrapped = true
 
     respond_to do |format|
       format.html # new.html.erb
