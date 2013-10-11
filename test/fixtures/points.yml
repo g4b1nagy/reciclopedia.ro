@@ -7,6 +7,7 @@ p0:
   paper: true
   plastic: true
   metal: false
+  glass: false
   other: ""
   name: "Panemar"
   schedule_week: "09:00 - 20:00"
@@ -21,6 +22,7 @@ p1:
   paper: true
   plastic: true
   metal: true
+  glass: false
   other: ""
   name: ""
   schedule_week: ""
@@ -35,6 +37,7 @@ p2:
   paper: true
   plastic: true
   metal: true
+  glass: true
   other: "Cupru, Aluminiu"
   name: "Reciclare SA"
   schedule_week: "08:00 - 18:00"
@@ -49,6 +52,7 @@ p3:
   paper: false
   plastic: false
   metal: false
+  glass: true
   other: "Baterii, Telefoane"
   name: "Orange"
   schedule_week: "09:00 - 17:00"
@@ -91,6 +95,7 @@ p6:
   paper: false
   plastic: false
   metal: false
+  glass: true
   other: "Telefoane, Baterii"
   name: "Orange"
   schedule_week: "08:00 - 17:00"
@@ -105,6 +110,7 @@ p7:
   paper: true
   plastic: true
   metal: true
+  glass: true
   other: "Cupru, Aluminiu"
   name: "Reciclare SA"
   schedule_week: "07:00 - 18:00"
@@ -161,6 +167,7 @@ p11:
   paper: true
   plastic: true
   metal: true
+  glass: false
   other: "Cupru, Aluminiu"
   name: "Reciclare SA"
   schedule_week: "07:00 - 18:00"
@@ -203,6 +210,7 @@ p14:
   paper: false
   plastic: true
   metal: true
+  glass: false
   other: "Becuri, Baterii"
   name: "Colectare SA"
   schedule_week: "08:00 - 17:00"

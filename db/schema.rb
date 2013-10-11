@@ -11,11 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131009071457) do
+ActiveRecord::Schema.define(:version => 20131011103310) do
 
   create_table "points", :force => true do |t|
-    t.decimal  "lat",           :precision => 9, :scale => 6
-    t.decimal  "lng",           :precision => 9, :scale => 6
+    t.decimal  "lat"
+    t.decimal  "lng"
     t.integer  "point_type"
     t.boolean  "paper"
     t.boolean  "plastic"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20131009071457) do
     t.string   "website"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "glass"
   end
 
 end
