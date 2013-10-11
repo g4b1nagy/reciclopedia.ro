@@ -1,3 +1,16 @@
+<% content_for :head do %>
+  <script type="text/javascript">
+    $(function() {
+      init();
+      initSearch(local_search);
+      initMap();
+      $.get(points_path + ".json", function(data) {
+        addPins(data);
+      });
+    });
+  </script>
+<% end %>
+
 <div class="container">
   <div class="row">
     <div class="col-lg-12">

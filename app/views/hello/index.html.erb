@@ -1,6 +1,15 @@
-<%= render "map" %>
 <% content_for :head do %>
   <%= stylesheet_link_tag "index" %>
+  <script type="text/javascript">
+    $(function() {
+      init();
+      initSearch(local_search);
+      initMap();
+      $.get(points_path + ".json", function(data) {
+        addPins(data);
+      });
+    });
+  </script>
 <% end %>
 
 <div class="container">

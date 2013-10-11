@@ -1,6 +1,16 @@
-<%= render "map" %>
 <% content_for :head do %>
   <%= stylesheet_link_tag "map" %>
+  <script type="text/javascript">
+    local_search = true;
+    $(function() {
+      init();
+      initSearch(local_search);
+      initMap();
+      $.get(points_path + ".json", function(data) {
+        addPins(data);
+      });
+    });
+  </script>
 <% end %>
 
 <div id="map-canvas"></div>

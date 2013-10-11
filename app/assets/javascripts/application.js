@@ -7,4 +7,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require main/bootstrap
+//= require main/markerclusterer
+//= require main/handlebars
 //= require main/script
