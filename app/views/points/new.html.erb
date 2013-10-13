@@ -15,102 +15,113 @@
     <div class="col-lg-5">
       <h2 class="page-title">Adaugă locație</h2>
 
-      <%= form_for(@point, :html => { :class => "form-horizontal", :role => "form" }) do |f| %>
+      <% if current_user %>
 
-        <div class="btn-group btn-group-justified">
-          <a href="#" class="btn btn-success active" data-point-type="0">
-            <%= image_tag "pin-recycle-bin.png", :alt => "recycle bin icon" %>
-            Pubele
-          </a>
-          <a href="#" class="btn btn-success" data-point-type="1">
-            <%= image_tag "pin-recycling-center.png", :alt => "recycling center icon" %>
-            Centru
-          </a>
-          <a href="#" class="btn btn-success" data-point-type="2">
-            <%= image_tag "pin-store.png", :alt => "store icon" %>
-            Magazin
-          </a>
-        </div>
-
-        <div id="alert" class="alert alert-warning collapse"></div>
-
-        <%= f.hidden_field :lat %>
-        <%= f.hidden_field :lng %>
-        <%= f.hidden_field :point_type, :value => 0 %>
-
-        <div class="form-group">
-          <label for="address" class="col-lg-3 control-label">Locație <span class="required-field">*</span></label>
-          <div class="col-lg-9">
-            <%= f.text_field :address, :class => "form-control", :placeholder => "Str. Spiridușilor Nr. 7", :readonly => true %>
-            <p class="help-block"><a id="detect" href="#">Detectează</a> locația curentă și / sau clicăie harta</p>
+        <%= form_for(@point, :html => { :class => "form-horizontal", :role => "form" }) do |f| %>
+          <div class="btn-group btn-group-justified">
+            <a href="#" class="btn btn-success active" data-point-type="0">
+              <%= image_tag "pin-recycle-bin.png", :alt => "recycle bin icon" %>
+              Pubele
+            </a>
+            <a href="#" class="btn btn-success" data-point-type="1">
+              <%= image_tag "pin-recycling-center.png", :alt => "recycling center icon" %>
+              Centru
+            </a>
+            <a href="#" class="btn btn-success" data-point-type="2">
+              <%= image_tag "pin-store.png", :alt => "store icon" %>
+              Magazin
+            </a>
           </div>
-        </div>
 
-        <div class="form-group">
-          <label for="materials" class="col-lg-3 control-label">Materiale <span class="required-field">*</span></label>
-          <div class="col-lg-9">
-            <div class="checkbox">
-              <label>
-                <%= f.check_box :paper %> Hârtie
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <%= f.check_box :plastic %> Plastic
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <%= f.check_box :metal %> Metal
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <%= f.check_box :glass %> Sticlă
-              </label>
+          <div id="alert" class="alert alert-warning collapse"></div>
+
+          <%= f.hidden_field :lat %>
+          <%= f.hidden_field :lng %>
+          <%= f.hidden_field :point_type, :value => 0 %>
+
+          <div class="form-group">
+            <label for="address" class="col-lg-3 control-label">Locație <span class="required-field">*</span></label>
+            <div class="col-lg-9">
+              <%= f.text_field :address, :class => "form-control", :placeholder => "Str. Spiridușilor Nr. 7", :readonly => true %>
+              <p class="help-block"><a id="detect" href="#">Detectează</a> locația curentă și / sau clicăie harta</p>
             </div>
           </div>
-        </div>
 
-        <div class="form-group">
-          <%= f.label :other, "Altele", :class => "col-lg-3 control-label" %>
-          <div class="col-lg-9">
-            <%= f.text_field :other, :class => "form-control", :placeholder => "Baterii, Telefoane, etc." %>
+          <div class="form-group">
+            <label for="materials" class="col-lg-3 control-label">Materiale <span class="required-field">*</span></label>
+            <div class="col-lg-9">
+              <div class="checkbox">
+                <label>
+                  <%= f.check_box :paper %> Hârtie
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <%= f.check_box :plastic %> Plastic
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <%= f.check_box :metal %> Metal
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <%= f.check_box :glass %> Sticlă
+                </label>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="form-group collapse">
-          <%= f.label :name, "Nume locație", :class => "col-lg-3 control-label" %>
-          <div class="col-lg-9">
-            <%= f.text_field :name, :class => "form-control", :placeholder => "SC Colectare SA" %>
+          <div class="form-group">
+            <%= f.label :other, "Altele", :class => "col-lg-3 control-label" %>
+            <div class="col-lg-9">
+              <%= f.text_field :other, :class => "form-control", :placeholder => "Baterii, Telefoane, etc." %>
+            </div>
           </div>
-        </div>
 
-        <div class="form-group collapse">
-          <label for="schedule" class="col-lg-3 control-label">Program</label>
-          <div class="col-lg-3">
-            <%= f.text_field :schedule_week, :class => "form-control", :placeholder => "Luni-Vineri" %>
+          <div class="form-group collapse">
+            <%= f.label :name, "Nume locație", :class => "col-lg-3 control-label" %>
+            <div class="col-lg-9">
+              <%= f.text_field :name, :class => "form-control", :placeholder => "SC Colectare SA" %>
+            </div>
           </div>
-          <div class="col-lg-3">
-            <%= f.text_field :schedule_sat, :class => "form-control", :placeholder => "Sâmbătă" %>
-          </div>
-          <div class="col-lg-3">
-            <%= f.text_field :schedule_sun, :class => "form-control", :placeholder => "Sâmbătă" %>
-          </div>
-        </div>
 
-        <div class="form-group collapse">
-          <%= f.label :website, "Website", :class => "col-lg-3 control-label" %>
-          <div class="col-lg-9">
-            <%= f.text_field :website, :class => "form-control", :placeholder => "www.colectare.ro" %>
+          <div class="form-group collapse">
+            <label for="schedule" class="col-lg-3 control-label">Program</label>
+            <div class="col-lg-3">
+              <%= f.text_field :schedule_week, :class => "form-control", :placeholder => "Luni-Vineri" %>
+            </div>
+            <div class="col-lg-3">
+              <%= f.text_field :schedule_sat, :class => "form-control", :placeholder => "Sâmbătă" %>
+            </div>
+            <div class="col-lg-3">
+              <%= f.text_field :schedule_sun, :class => "form-control", :placeholder => "Sâmbătă" %>
+            </div>
           </div>
-        </div>
 
-        <div class="form-group">
-          <div class="col-lg-offset-3 col-lg-9">
-            <button name="commit" type="submit" class="btn btn-success">Adaugă</button>
+          <div class="form-group collapse">
+            <%= f.label :website, "Website", :class => "col-lg-3 control-label" %>
+            <div class="col-lg-9">
+              <%= f.text_field :website, :class => "form-control", :placeholder => "www.colectare.ro" %>
+            </div>
           </div>
-        </div>
+
+          <div class="form-group">
+            <div class="col-lg-offset-3 col-lg-9">
+              <button name="commit" type="submit" class="btn btn-success">Adaugă</button>
+            </div>
+          </div>
+        <% end %>
+
+      <% else %>
+
+        <p id="stahp">Pentru a evita abuzurile, trebuie să fii logat pentru a adăuga o locație.</p>
+        <a href="/auth/facebook" id="sign-in" class="btn btn-primary">
+          <%= image_tag "facebook-icon.png", :alt => "facebook icon" %>
+          Autentificare
+        </a>
+
       <% end %>
 
     </div>

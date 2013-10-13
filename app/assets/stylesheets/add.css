@@ -1,3 +1,24 @@
+/*================================================================================================= SIGN IN */
+
+#sign-in {
+  background-color: #4862a3;
+  color: #fff;
+  border-color: #364f8f;
+}
+
+#sign-in:hover {
+  background-color: #364f8f;
+}
+
+#sign-in img {
+  margin-top: -2px;
+  margin-right: 7px;
+}
+
+#stahp {
+  margin-bottom: 20px;
+}
+
 /*================================================================================================= FORM */
 
 .btn-group {
