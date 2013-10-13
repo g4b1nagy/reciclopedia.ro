@@ -27,8 +27,7 @@ function zoomOn(location) {
       map.setCenter(results[0].geometry.location);
       map.setZoom(13);
     } else {
-      // TODO
-      alert("Geocode was not successful: " + status);
+      // geocode failed due to status
     }
   });
 }
