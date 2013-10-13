@@ -41,7 +41,7 @@
         <div class="form-group">
           <label for="address" class="col-lg-3 control-label">Locație <span class="required-field">*</span></label>
           <div class="col-lg-9">
-            <input type="text" class="form-control" id="address" placeholder="Str. Spiridușilor Nr. 7" disabled="disabled">
+            <%= f.text_field :address, :class => "form-control", :placeholder => "Str. Spiridușilor Nr. 7", :readonly => true %>
             <p class="help-block"><a id="detect" href="#">Detectează</a> locația curentă și / sau clicăie harta</p>
           </div>
         </div>

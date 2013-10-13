@@ -30,7 +30,7 @@ var marker = new google.maps.Marker({map: map});
         geocoder.geocode({"latLng": position}, function(results, status) {
           if (status == google.maps.GeocoderStatus.OK) {
             if (results[0]) {
-              $("#address").val(results[0].formatted_address);
+              $("#point_address").val(results[0].formatted_address);
             }
           } else {
             // geocode failed due to status
@@ -55,7 +55,7 @@ var marker = new google.maps.Marker({map: map});
     geocoder.geocode({"latLng": position}, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
         if (results[0]) {
-          $("#address").val(results[0].formatted_address);
+          $("#point_address").val(results[0].formatted_address);
         }
       } else {
         // geocode failed due to status
