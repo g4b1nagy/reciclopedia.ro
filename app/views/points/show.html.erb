@@ -1,65 +1,21 @@
-<p id="notice"><%= notice %></p>
+<% content_for :head do %>
+  <%= stylesheet_link_tag "map" %>
+  <script type="text/javascript">
+    local_search = true;
+    $(function() {
+      init();
+      initSearch(local_search);
+      initMap();
+      $.get(points_path + "/<%= @point.id %>.json", function(data) {
+        data = [data];
+        addPins(data);
+        map.setZoom(17);
+        var center = new google.maps.LatLng(data[0]["lat"], data[0]["lng"]);
+        map.setCenter(center);
+        google.maps.event.trigger(markers[0], "click");
+      });
+    });
+  </script>
+<% end %>
 
-<p>
-  <b>Lat:</b>
-  <%= @point.lat %>
-</p>
-
-<p>
-  <b>Lng:</b>
-  <%= @point.lng %>
-</p>
-
-<p>
-  <b>Point type:</b>
-  <%= @point.point_type %>
-</p>
-
-<p>
-  <b>Paper:</b>
-  <%= @point.paper %>
-</p>
-
-<p>
-  <b>Plastic:</b>
-  <%= @point.plastic %>
-</p>
-
-<p>
-  <b>Metal:</b>
-  <%= @point.metal %>
-</p>
-
-<p>
-  <b>Other:</b>
-  <%= @point.other %>
-</p>
-
-<p>
-  <b>Name:</b>
-  <%= @point.name %>
-</p>
-
-<p>
-  <b>Schedule week:</b>
-  <%= @point.schedule_week %>
-</p>
-
-<p>
-  <b>Schedule sat:</b>
-  <%= @point.schedule_sat %>
-</p>
-
-<p>
-  <b>Schedule sun:</b>
-  <%= @point.schedule_sun %>
-</p>
-
-<p>
-  <b>Website:</b>
-  <%= @point.website %>
-</p>
-
-
-<%= link_to 'Edit', edit_point_path(@point) %> |
-<%= link_to 'Back', points_path %>
+<div id="map-canvas"></div>

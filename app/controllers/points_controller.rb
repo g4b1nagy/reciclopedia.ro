@@ -15,6 +15,9 @@ class PointsController < ApplicationController
   # GET /points/1
   # GET /points/1.json
   def show
+    @page_name = " | locația " + params[:id]
+    @page_description = "Harta punctelor de reciclare la care oricine poate contribui"
+
     @point = Point.find(params[:id])
 
     respond_to do |format|

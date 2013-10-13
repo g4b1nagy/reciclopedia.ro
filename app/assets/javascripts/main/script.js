@@ -14,6 +14,7 @@ function init() {
     },
     scrollwheel: true
   };
+  markers = [];
   geocoder = new google.maps.Geocoder();
   infowindow = new google.maps.InfoWindow();
 }
@@ -73,14 +74,13 @@ function addPins(data) {
   google.maps.event.addListener(map, "click", function() {
     infowindow.close();
   });
-  var markers = [];
   var pins = ["pin-recycle-bin.png", "pin-recycling-center.png", "pin-store.png"];
   var titles = ["Pubele reciclare", "Centru colectare", "Magazin"];
   var template = Handlebars.compile($("#template").html());
   for (var i = 0; i < data.length; i++) {
     var marker = new google.maps.Marker({
       position: new google.maps.LatLng(data[i]["lat"], data[i]["lng"]),
-      icon: "assets/" + pins[data[i]["point_type"]],
+      icon: "/assets/" + pins[data[i]["point_type"]],
       title: titles[data[i]["type"]],
       index: i,
       map: map
@@ -97,7 +97,7 @@ function addPins(data) {
     maxZoom: 11,
     styles: [
       {
-        url: "assets/tree.png",
+        url: "/assets/tree.png",
         width: 32,
         height: 32,
         anchor: [7, null],
