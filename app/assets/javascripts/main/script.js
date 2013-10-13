@@ -35,7 +35,8 @@ function zoomOn(location) {
 //================================================================================================= INIT SEARCH
 
 function initSearch(local) {
-  if (document.location.hash != "" && document.getElementById("map-canvas")) {
+  var hash = document.location.hash.replace("#", "").trim();
+  if (hash != "" && hash != "_=_" && document.getElementById("map-canvas")) {
     zoomOn(decodeURIComponent(document.location.hash));
   }
   $("#search").submit(function(event) {

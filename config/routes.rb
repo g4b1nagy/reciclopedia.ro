@@ -1,9 +1,14 @@
 Reciclopedia::Application.routes.draw do
 
   root to: "hello#index"
+
   get "/map" => "hello#map", :as => :map
   get "/add" => "points#new", :as => :add
   get "/about" => "hello#about", :as => :about
+
+  match "/auth/:provider/callback" => "sessions#create"
+  match "/sign-out" => "sessions#destroy", :as => :sign_out
+
   resources :points
 
   # The priority is based upon order of creation:
