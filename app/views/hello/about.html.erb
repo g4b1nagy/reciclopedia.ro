@@ -2,7 +2,7 @@
   <script type="text/javascript">
     $(function() {
       init();
-      initSearch(local_search);
+      initSearch();
       initMap();
       $.get(points_path + ".json", function(data) {
         addPins(data);

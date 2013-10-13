@@ -43,6 +43,7 @@ function initSearch(local) {
     if (!city) {
       return false;
     }
+    local = local || false;
     if (local) {
       zoomOn(city);
       document.location.hash = encodeURIComponent(city);
