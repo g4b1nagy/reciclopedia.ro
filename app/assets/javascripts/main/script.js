@@ -90,6 +90,11 @@ function addPins(data) {
       var marker = this;
       infowindow.setContent(template(data[marker.index]));
       infowindow.open(map, marker);
+      var graphUrl = "http://graph.facebook.com/" + data[marker.index]["user_uid"];
+      $.get(graphUrl, function(data) {
+        $("#infowindow .img-avatar").attr("src", graphUrl + "/picture");
+        $("#infowindow .img-avatar").attr("title", "Adăugat de " + data["name"]);
+      });
     });
     markers.push(marker);
   }

@@ -22,7 +22,7 @@ class PointsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @point }
+      format.json { render json: @point, :except => [:address, :created_at, :updated_at] }
     end
   end
 
@@ -50,6 +50,7 @@ class PointsController < ApplicationController
   # POST /points.json
   def create
     @point = Point.new(params[:point])
+    @point.user_uid = current_user.uid
 
     respond_to do |format|
       if @point.save
