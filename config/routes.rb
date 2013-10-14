@@ -9,7 +9,9 @@ Reciclopedia::Application.routes.draw do
   match "/auth/:provider/callback" => "sessions#create"
   match "/sign-out" => "sessions#destroy", :as => :sign_out
 
-  resources :points
+  get "/points(.:format)" => "points#index", :as => :points
+  post "/points(.:format)" => "points#create"
+  get "/points/:id(.:format)" => "points#show", :as => :point
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
