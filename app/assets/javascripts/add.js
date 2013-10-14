@@ -72,6 +72,9 @@ var marker = new google.maps.Marker({map: map});
         return true;
       }
     }
+    if ($("#point_other").val().trim() != "") {
+      return true;
+    }
     return false;
   }
 
