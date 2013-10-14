@@ -49,7 +49,7 @@ class PointsController < ApplicationController
       if @point.save
         format.html { redirect_to @point, notice: 'Point was successfully created.' }
       else
-        format.html { render action: "new" }
+        format.html { redirect_to :add }
       end
     end
   end
