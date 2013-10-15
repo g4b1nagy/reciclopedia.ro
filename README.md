@@ -13,7 +13,7 @@ Based on Google Maps, it provides a simple interface that allows users to look f
 ### Getting your hands dirty ###
 
 The app requires Ruby 1.9.3 on Rails 3.1.0.  
-If you are using [RVM](https://rvm.io/) or any similar env managers, fret not for a ".ruby-version" file is provided for your convenience.
+If you are using [RVM](https://rvm.io/) or any similar env managers, fret not, for a ".ruby-version" file is provided for your convenience.
 
 * cd to a comfy location
 * git clone git@github.com:g4b1nagy/reciclopedia.ro.git
