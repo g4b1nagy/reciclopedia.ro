@@ -2,6 +2,10 @@
   <%= stylesheet_link_tag "index" %>
   <script type="text/javascript">
     $(function() {
+      $(".huh").tooltip();
+      $(".huh").click(function() {
+        return false;
+      });
       init();
       initSearch();
       initMap();
@@ -24,18 +28,22 @@
           <tr>
             <td><%= image_tag "tree-numbered.png", :alt => "tree icon" %></td>
             <td>Zonă cu 5 locații de reciclare</td>
+            <td><a href="#" class="huh" data-toggle="tooltip" title="Punctele sunt grupate pe zone pentru a evita aglomerarea hărții">?</a></td>
           </tr>
           <tr>
             <td><%= image_tag "pin-recycle-bin.png", :alt => "recycle bin icon" %></td>
             <td>Pubele reciclare</td>
+            <td><a href="#" class="huh" data-toggle="tooltip" title="Containere plasate pe domeniul public">?</a></td>
           </tr>
           <tr>
             <td><%= image_tag "pin-recycling-center.png", :alt => "recycling center icon" %></td>
             <td>Centru colectare</td>
+            <td><a href="#" class="huh" data-toggle="tooltip" title="Companie care achiziționează materiale reciclabile">?</a></td>
           </tr>
           <tr>
             <td><%= image_tag "pin-store.png", :alt => "store icon" %></td>
             <td>Magazin</td>
+            <td><a href="#" class="huh" data-toggle="tooltip" title="Locație echipată cu puncte de colectare">?</a></td>
           </tr>
         </tbody>
       </table>

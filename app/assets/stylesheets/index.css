@@ -19,4 +19,16 @@
   vertical-align: middle;
 }
 
+.blurb .huh {
+  padding: 2px 6px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.blurb .huh:hover {
+  background-color: #aaa;
+}
+
 /*================================================================================================= END */
