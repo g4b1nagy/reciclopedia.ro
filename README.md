@@ -18,7 +18,7 @@ If you are using [RVM](https://rvm.io/) or any similar env managers, fret not, f
 * cd to a comfy location
 * git clone git@github.com:g4b1nagy/reciclopedia.ro.git
 * cd reciclopedia.ro/
-* mv config/database.yml.example config/database.yml
+* cp config/database.yml.example config/database.yml
 * bundle install
 * rake db:migrate
 * rake db:fixtures:load
