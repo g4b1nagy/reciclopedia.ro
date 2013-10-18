@@ -27,4 +27,4 @@ If you are using [RVM](https://rvm.io/) or any similar env managers, fret not, f
 ### Feeling generous? ###
 
 Contributions are more than welcome and are generally rewarded with a huge THANK YOU! and a [virtual] hug. Feel free to tackle any of the [issues](https://github.com/g4b1nagy/reciclopedia.ro/issues) and send me a pull request afterwards.  
-If you have bigger plans, feel free to drop me a line at gabi@helpfulsheep.com.
+If you have bigger plans, feel free to drop me a line at gabi@usetogether.com.

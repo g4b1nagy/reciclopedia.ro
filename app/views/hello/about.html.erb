@@ -1,4 +1,5 @@
 <% content_for :head do %>
+  <%= stylesheet_link_tag "about" %>
   <script type="text/javascript">
     $(function() {
       init();
@@ -13,9 +14,21 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-lg-12">
+    <div class="col-lg-6">
       <h2 class="page-title">Despre</h2>
-      <p>... în curând</p>
+      <p>reciclopedia.ro s-a născut din frustrarea vânătorii de pubele de reciclare sub presiunea unui teanc uriaș de hârtie la purtător. Da, le-ai văzut prin oraș, știi că ar trebui să fie una în zonă, dar unde Dumnezeu??!</p>
+      <p>Ar trebui să fie mult mai ușor să faci un gest frumos și să reciclezi.</p>
+      <p><%= image_tag "reciclopedia.ro-smartphone.jpg", :class => "thumbnail", :alt => "reciclopedia.ro on a smartphone" %></p>
+      <p>Cred cu tărie în capacitatea oamenilor de a face lucruri bune și sunt convins că împreună putem face lumea un loc mai bun.</p>
+      <blockquote>
+        <small>Gabi Nagy</small>
+      </blockquote>
+    </div>
+    <div class="col-lg-6">
+      <h3>010000110110111101100100?</h3>
+      <p>Desigur! reciclopedia.ro e un proiect open source și contribuțiile sunt mai mult decât binevenite. Mai multe detalii pe <a href="https://github.com/g4b1nagy/reciclopedia.ro">GitHub</a>.</p>
+      <h3>Contact</h3>
+      <p>Pentru orice fel de întrebări, sugestii sau sfaturi, nu ezita să-mi scrii un mail pe adresa <a href="mailto:gabi@usetogether.com">gabi@usetogether.com</a> sau să postezi pe <a href="https://www.facebook.com/reciclopedia.ro">pagina de Facebook</a>.</p>
     </div>
   </div>
 </div>
