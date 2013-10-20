@@ -91,6 +91,10 @@ var marker = new google.maps.Marker({map: map});
       $("#alert").show();
       return false;
     }
+    var website = $("#point_website").val().trim();
+    if (website != "" && website.indexOf("http") == -1) {
+      $("#point_website").val("http://" + website);
+    }
   });
 
 });

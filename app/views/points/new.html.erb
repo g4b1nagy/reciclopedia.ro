@@ -37,13 +37,13 @@
 
           <%= f.hidden_field :lat %>
           <%= f.hidden_field :lng %>
+          <%= f.hidden_field :address %>
           <%= f.hidden_field :point_type, :value => 0 %>
 
           <div class="form-group">
             <label for="address" class="col-lg-3 control-label">Locație <span class="required-field">*</span></label>
             <div class="col-lg-9">
-              <%= f.text_field :address, :class => "form-control", :placeholder => "Str. Spiridușilor Nr. 7", :readonly => true %>
-              <p class="help-block"><a id="detect" href="#">Detectează</a> locația curentă și / sau clicăie harta</p>
+              <p class="help-block"><a id="detect" class="btn btn-primary btn-xs" href="#">Detectează</a> locația curentă sau clicăie harta</p>
             </div>
           </div>
 
