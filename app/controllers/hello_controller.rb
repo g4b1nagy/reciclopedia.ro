@@ -1,3 +1,5 @@
+# coding: utf-8
+
 class HelloController < ApplicationController
 
   def index
@@ -7,13 +9,13 @@ class HelloController < ApplicationController
   end
 
   def map
-    @page_name = " | puncte reciclare"
-    @page_description = "Harta punctelor de reciclare la care oricine poate contribui"
+    @page_name = " | harta"
+    @page_description = "Găsește un punct de reciclare pe hartă"
   end
 
   def about
     @page_name = " | despre"
-    @page_description = "Harta punctelor de reciclare la care oricine poate contribui"
+    @page_description = "Despre reciclopedia.ro"
     @wrapped = true
   end
 

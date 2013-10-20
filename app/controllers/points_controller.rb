@@ -29,7 +29,7 @@ class PointsController < ApplicationController
   # GET /points/new.json
   def new
     @page_name = " | adaugă locație"
-    @page_description = "Harta punctelor de reciclare la care oricine poate contribui"
+    @page_description = "Adaugă un punct nou de reciclare pe hartă"
     @wrapped = true
 
     @point = Point.new
