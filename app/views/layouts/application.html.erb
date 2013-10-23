@@ -11,78 +11,7 @@
     <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=PT+Sans+Caption&subset=latin,latin-ext" %>
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyB23Zxt4p-uThsKQgIY5P5RZ7nZKHGiOz4&sensor=true&language=ro" %>
-    <script id="template" type="text/x-handlebars-template">
-      <div id="infowindow">
-        <div class="list-group">
-          {{#if name}}
-            <a {{#if website}} href="{{website}}" target="_blank" {{/if}} class="list-group-item active">
-              <h5 class="list-group-item-heading">{{name}}</h5>
-            </a>
-          {{else}}
-            <a class="list-group-item active">
-              <h5 class="list-group-item-heading">Pubele reciclare</h5>
-            </a>
-          {{/if}}
-          {{#if paper}}
-            <a class="list-group-item">
-              <p class="list-group-item-text">
-                <%= image_tag "icon-file.png", :alt => "material icon" %> Hârtie
-              </p>
-            </a>
-          {{/if}}
-          {{#if plastic}}
-            <a class="list-group-item">
-              <p class="list-group-item-text">
-                <%= image_tag "icon-cup.png", :alt => "material icon" %> Plastic
-              </p>
-            </a>
-          {{/if}}
-          {{#if metal}}
-            <a class="list-group-item">
-              <p class="list-group-item-text">
-                <%= image_tag "icon-magnet.png", :alt => "material icon" %> Metal
-              </p>
-            </a>
-          {{/if}}
-          {{#if glass}}
-            <a class="list-group-item">
-              <p class="list-group-item-text">
-                <%= image_tag "icon-beaker.png", :alt => "material icon" %> Sticlă
-              </p>
-            </a>
-          {{/if}}
-          {{#if other}}
-            <a class="list-group-item">
-              <p class="list-group-item-text">
-                <%= image_tag "icon-check.png", :alt => "material icon" %> {{other}}
-              </p>
-            </a>
-          {{/if}}
-          {{#if schedule_week}}
-            <a class="list-group-item">
-              <p class="list-group-item-text">
-                <span class="pull-left">Luni - Vinerii</span>
-                <span>{{schedule_week}}</span>
-              </p>
-              {{#if schedule_sat}}
-                <p class="list-group-item-text">
-                  <span class="pull-left">Sâmbătă</span>
-                  <span>{{schedule_sat}}</span>
-                </p>
-              {{/if}}
-              {{#if schedule_sun}}
-                <p class="list-group-item-text">
-                  <span class="pull-left">Duminică</span>
-                  <span>{{schedule_sun}}</span>
-                </p>
-              {{/if}}
-            </a>
-          {{/if}}
-        </div>
-        <button id="report" type="button" class="btn btn-success btn-sm" data-point-id="{{id}}">Raportează greșeala</button>
-        <%= image_tag "avatar.png", :class => "img-avatar pull-right", :alt => "user avatar", :title => "Adăugat de ???" %>
-      </div>
-    </script>
+    <%= render :partial => "layouts/infowindow" %>
     <script type="text/javascript">
       var map_path = "<%= map_path %>";
       var points_path = "<%= points_path %>";

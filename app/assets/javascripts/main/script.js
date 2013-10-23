@@ -77,6 +77,13 @@ function addPins(data) {
   });
   var pins = ["pin-recycle-bin.png", "pin-recycling-center.png", "pin-store.png"];
   var titles = ["Pubele reciclare", "Centru colectare", "Magazin"];
+  Handlebars.registerHelper("ifequal", function(op1, op2, options) {
+    if (op1 === op2) {
+      return options.fn(this);
+    } else {
+      return options.inverse(this);
+    }
+  });
   var template = Handlebars.compile($("#template").html());
   for (var i = 0; i < data.length; i++) {
     var marker = new google.maps.Marker({
