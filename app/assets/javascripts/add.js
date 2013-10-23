@@ -10,8 +10,16 @@ var marker = new google.maps.Marker({map: map});
     $("#point_point_type").val(pointType);
     if (pointType == 0) {
       $(".form-group.collapse").hide("normal");
-    } else {
+    }
+    if (pointType == 1) {
       $(".form-group.collapse").show("normal");
+      $("#point_name").attr("placeholder", "SC Colectare SA");
+      $("#point_website").attr("placeholder", "www.colectare.ro");
+    }
+    if (pointType == 2) {
+      $(".form-group.collapse").show("normal");
+      $("#point_name").attr("placeholder", "SC Magazin SA");
+      $("#point_website").attr("placeholder", "www.magazin.ro");
     }
     return false;
   });
