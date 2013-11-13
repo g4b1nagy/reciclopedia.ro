@@ -106,7 +106,7 @@ function addPins(data) {
     markers.push(marker);
   }
   var markerCluster = new MarkerClusterer(map, markers, {
-    gridSize: 25,
+    gridSize: 30,
     maxZoom: 11,
     styles: [
       {
