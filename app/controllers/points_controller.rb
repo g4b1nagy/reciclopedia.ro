@@ -14,7 +14,7 @@ class PointsController < ApplicationController
   # GET /points/1
   # GET /points/1.json
   def show
-    @page_name = " | locația " + params[:id]
+    @page_name = "Locația #" + params[:id] + " | "
     @page_description = "Harta punctelor de reciclare la care oricine poate contribui"
 
     @point = Point.find(params[:id])
@@ -28,7 +28,7 @@ class PointsController < ApplicationController
   # GET /points/new
   # GET /points/new.json
   def new
-    @page_name = " | adaugă locație"
+    @page_name = "Adaugă locație | "
     @page_description = "Adaugă un punct nou de reciclare pe hartă"
     @wrapped = true
 
