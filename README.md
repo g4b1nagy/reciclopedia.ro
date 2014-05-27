@@ -1,7 +1,8 @@
 reciclopedia.ro
 ===============
 
-Harta punctelor de reciclare la care oricine poate contribui
+Open map of recycling points in Rails
+
 ### What's this? ###
 
 [reciclopedia.ro](http://reciclopedia.ro/) is a map of recycling points to which anyone can contribute.
