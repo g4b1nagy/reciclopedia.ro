@@ -1,5 +1,6 @@
 $(function() {
 var marker = new google.maps.Marker({map: map});
+var infowindow = new google.maps.InfoWindow();
 
 //================================================================================================= POINT TYPE SELECTION
 
@@ -27,6 +28,7 @@ var marker = new google.maps.Marker({map: map});
 //================================================================================================= DETECT LOCATION
 
   $("#detect").click(function() {
+    infowindow.close();
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position) {
         var position = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
@@ -39,6 +41,8 @@ var marker = new google.maps.Marker({map: map});
           if (status == google.maps.GeocoderStatus.OK) {
             if (results[0]) {
               $("#point_address").val(results[0].formatted_address);
+              infowindow.setContent(results[0].formatted_address);
+              infowindow.open(map, marker);
             }
           } else {
             // geocode failed due to status
@@ -56,6 +60,7 @@ var marker = new google.maps.Marker({map: map});
 //================================================================================================= CLICK MAP
 
   google.maps.event.addListener(map, "click", function(event) {
+    infowindow.close();
     position = event.latLng;
     marker.setPosition(position);
     $("#point_lat").val(position.lat());
@@ -64,6 +69,8 @@ var marker = new google.maps.Marker({map: map});
       if (status == google.maps.GeocoderStatus.OK) {
         if (results[0]) {
           $("#point_address").val(results[0].formatted_address);
+          infowindow.setContent(results[0].formatted_address);
+          infowindow.open(map, marker);
         }
       } else {
         // geocode failed due to status
