@@ -239,6 +239,10 @@ a, a:link, a:visited, a:hover, a:active {
   width: 90px;
 }
 
+#infowindow #report {
+  color: #fff;
+}
+
 #infowindow .img-avatar {
   width: auto;
   height: 30px;

@@ -112,7 +112,11 @@
         </a>
       {{/if}}
     </div>
-    <button id="report" type="button" class="btn btn-success btn-sm" data-point-id="{{id}}">Raportează greșeala</button>
+    <% if current_user %>
+      <button id="report" type="button" class="btn btn-success btn-sm" data-point-id="{{id}}">Raportează greșeala</button>
+    <% else %>
+      <a id="report" href="/auth/facebook" class="btn btn-success btn-sm" data-point-id="{{id}}">Raportează greșeala</a>
+    <% end %>
     <%= image_tag "avatar.png", :class => "img-avatar pull-right", :alt => "user avatar", :title => "Adăugat de ???" %>
   </div>
 </script>
