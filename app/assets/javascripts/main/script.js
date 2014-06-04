@@ -17,6 +17,19 @@ function init() {
   markers = [];
   geocoder = new google.maps.Geocoder();
   infowindow = new google.maps.InfoWindow();
+  $(document).on('click', '#report', function() {
+    var button = $(this);
+    button.html('Te rog așteaptă...');
+    $.post('/report.json', { point_id: button.attr('data-point-id') }, function(data) {
+      if (data.status == 'success') {
+        button.html('Punctul a fost raportat');
+        button.addClass('disabled');
+      } else {
+        button.html('A apărut o eroare');
+        button.addClass('disabled');
+      }
+    });
+  });
 }
 
 //================================================================================================= ZOOM ON

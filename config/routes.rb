@@ -12,6 +12,7 @@ Reciclopedia::Application.routes.draw do
   get "/locatii(.:format)" => "points#index", :as => :points
   post "/locatii(.:format)" => "points#create"
   get "/locatii/:id(.:format)" => "points#show", :as => :point
+  post "/report(.:format)" => "points#report"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

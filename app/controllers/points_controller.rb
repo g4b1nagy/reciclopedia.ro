@@ -54,4 +54,28 @@ class PointsController < ApplicationController
     end
   end
 
+  # POST /report.json
+  def report
+    if Point.where(id: params[:point_id].to_i).any?
+      @r = Report.new()
+      @r.point_id = params[:point_id].to_i
+      @r.user_uid = current_user.uid
+
+      respond_to do |format|
+        if @r.save
+          format.json { render :json => { :status => 'success' } }
+        else
+          format.json { render :json => { :status => 'fail' } }
+        end
+      end
+
+    else
+
+      respond_to do |format|
+        format.json { render :json => { :status => 'error' } }
+      end
+
+    end
+  end
+
 end
