@@ -1,5 +1,4 @@
 class Point < ActiveRecord::Base
-  belongs_to :user
 
   validates :lat, :lng, :user_uid, presence: true
   validates :lat, :lng, numericality: true
