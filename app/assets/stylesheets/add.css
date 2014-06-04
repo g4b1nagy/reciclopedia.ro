@@ -35,8 +35,8 @@
   margin-right: 3px;
 }
 
-.alert {
-  margin-top: -10px;
+.form-group img {
+  vertical-align: -3px;
 }
 
 .help-block {
@@ -50,7 +50,7 @@
 /*================================================================================================= MAP */
 
 #map-canvas {
-  height: 440px;
+  height: 452px;
   border: 1px solid #ddd;
 }
 

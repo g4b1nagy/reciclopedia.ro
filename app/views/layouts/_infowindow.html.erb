@@ -49,6 +49,34 @@
           </p>
         </a>
       {{/if}}
+      {{#if textiles}}
+        <a class="list-group-item">
+          <p class="list-group-item-text">
+            <%= image_tag "icon-bag.png", :alt => "material icon" %> Haine, pantofi, jucării
+          </p>
+        </a>
+      {{/if}}
+      {{#if electrics}}
+        <a class="list-group-item">
+          <p class="list-group-item-text">
+            <%= image_tag "icon-camera.png", :alt => "material icon" %> Electrice, electronice
+          </p>
+        </a>
+      {{/if}}
+      {{#if batteries}}
+        <a class="list-group-item">
+          <p class="list-group-item-text">
+            <%= image_tag "icon-tasks.png", :alt => "material icon" %> Baterii, acumulatori
+          </p>
+        </a>
+      {{/if}}
+      {{#if lights}}
+        <a class="list-group-item">
+          <p class="list-group-item-text">
+            <%= image_tag "icon-certificate.png", :alt => "material icon" %> Becuri, neoane
+          </p>
+        </a>
+      {{/if}}
       {{#if other}}
         <a class="list-group-item">
           <p class="list-group-item-text">
@@ -59,7 +87,7 @@
       {{#if schedule_week}}
         <a class="list-group-item">
           <p class="list-group-item-text">
-            <span class="pull-left">Luni - Vinerii</span>
+            <span class="pull-left">Luni - Vineri</span>
             <span>{{schedule_week}}</span>
           </p>
           {{#if schedule_sat}}
@@ -74,6 +102,13 @@
               <span>{{schedule_sun}}</span>
             </p>
           {{/if}}
+        </a>
+      {{/if}}
+      {{#if phone}}
+        <a class="list-group-item">
+          <p class="list-group-item-text">
+            {{phone}}
+          </p>
         </a>
       {{/if}}
     </div>
